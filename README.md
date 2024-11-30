@@ -3,7 +3,7 @@
 This file serves as a brief introduction to my educational background, work experience, and skills. It includes:
 
 - **My Educational Background and Work**  
-- Details about my skills, experiences, and achievements**  
+  - Details about my skills, experiences, and achievements.  
 - **My Projects**  
   - Some projects I have implemented so far in my field.  
 
@@ -73,17 +73,17 @@ Expanded skill set in:
 ## **Education**
 
 ### **Computer Science**  
-**National University of Computing and Emerging Sciences**  
+*National University of Computing and Emerging Sciences*  
 **Duration**: September 2021 – Present  
 **Location**: Islamabad, Pakistan  
 
 ### **Pre-Med with Mathematics**  
-**Scienta Vision College**  
+*Scienta Vision College*  
 **Duration**: September 2018 – May 2020  
 **Location**: Islamabad, Pakistan  
 
 ### **IGCSE**  
-**Global System of Integrated Studies**  
+*Global System of Integrated Studies*  
 **Duration**: September 2014 – May 2017  
 **Location**: Islamabad, Pakistan  
 
