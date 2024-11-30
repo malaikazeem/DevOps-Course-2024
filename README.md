@@ -13,14 +13,10 @@ Keep reading to learn more about me!
 
 # **CV**
 
-Name:  
-Malaika Azeem  
-Title:  
-Full Stack Developer  
-Email:  
-[malaikazeem01@gmail.com](mailto:malaikazeem01@gmail.com)  
-Location:  
-Islamabad, Pakistan  
+Name: Malaika Azeem  
+Title: Full Stack Developer  
+Email: [malaikazeem01@gmail.com](mailto:malaikazeem01@gmail.com)  
+Location: Islamabad, Pakistan  
 
 ---
 
