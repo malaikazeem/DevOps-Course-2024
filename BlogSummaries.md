@@ -4,7 +4,7 @@ Read ahead to find out what I’ve shared on a various topics, offering a glimps
 
 ### Mastering Cloud Infrastructure with Pulumi
 
-[A Guide to Setting Up a Pulumi Cluster] (https://medium.com/@malaikazeem01/mastering-cloud-infrastructure-a-guide-to-setting-up-a-pulumi-cluster-1a9b31fbbe37)
+[A Guide to Setting Up a Pulumi Cluster](https://medium.com/@malaikazeem01/mastering-cloud-infrastructure-a-guide-to-setting-up-a-pulumi-cluster-1a9b31fbbe37)
 
 This blog explains how Pulumi revolutionizes cloud infrastructure management by using familiar programming languages like JavaScript, Python, and Go instead of domain-specific languages like YAML or JSON. It covers:
 
@@ -17,7 +17,7 @@ The blog emphasizes how Pulumi simplifies cloud infrastructure management by red
 
 ### Docker vs. Podman: What’s the Best Container Solution for You?
 
-[Docker vs Podman] (https://medium.com/@malaikazeem01/docker-vs-podman-whats-the-best-container-solution-for-you-b043f588efdd)
+[Docker vs Podman](https://medium.com/@malaikazeem01/docker-vs-podman-whats-the-best-container-solution-for-you-b043f588efdd)
 
 This blog explores the differences between Docker and Podman, two leading containerization tools, to help users decide which suits their needs. It covers:
 
