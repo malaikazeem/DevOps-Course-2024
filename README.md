@@ -44,7 +44,6 @@ A dedicated and emerging software developer skilled in several programming langu
 ---
 
 ## **Experience**
-
 ### **Software Engineering & Automation Lab, Intern**  
 **July 2024 – August 2024 | Islamabad, Pakistan**  
 Expanded skill set in:  
@@ -55,7 +54,6 @@ Expanded skill set in:
 ---
 
 ## **Projects**
-
 ### Brick Breaker Game  
 **Language**: Assembly  
 **Duration**: November 2022 – December 2022  
@@ -71,7 +69,6 @@ Expanded skill set in:
 ---
 
 ## **Education**
-
 ### **Computer Science**  
 *National University of Computing and Emerging Sciences*  
 **Duration**: September 2021 – Present  
