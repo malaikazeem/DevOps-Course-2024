@@ -2,7 +2,7 @@ This file provides an overview and a rief summary of each of my articles.
 
 Read ahead to find out what I’ve shared on a various topics, offering a glimpse into my writings and areas of interest.
 
-### Mastering Cloud Infrastructure with Pulumi
+# Mastering Cloud Infrastructure with Pulumi
 
 [A Guide to Setting Up a Pulumi Cluster](https://medium.com/@malaikazeem01/mastering-cloud-infrastructure-a-guide-to-setting-up-a-pulumi-cluster-1a9b31fbbe37)
 
@@ -15,7 +15,7 @@ This blog explains how Pulumi revolutionizes cloud infrastructure management by 
 
 The blog emphasizes how Pulumi simplifies cloud infrastructure management by reducing reliance on complex configuration files, making it more developer-friendly.
 
-### Docker vs. Podman: What’s the Best Container Solution for You?
+# Docker vs. Podman: What’s the Best Container Solution for You?
 
 [Docker vs Podman](https://medium.com/@malaikazeem01/docker-vs-podman-whats-the-best-container-solution-for-you-b043f588efdd)
 
