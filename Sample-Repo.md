@@ -82,7 +82,7 @@ spec:
 
 ---
 
-#### 3. **Continuous Integration with GitHub Actions**
+### 3. **Continuous Integration with GitHub Actions**
 A GitHub Actions workflow automates testing and deployment.
 
 Workflow Configuration (.github/workflows/main.yml):
@@ -131,14 +131,14 @@ jobs:
 ---
 
 
-#### 4. **Monitoring with Prometheus and Grafana**
+### 4. **Monitoring with Prometheus and Grafana**
 Steps:
 - Add a /metrics endpoint in the Node.js API for Prometheus scraping.
 - Deploy Prometheus and Grafana using Helm in the Kubernetes cluster.
 - Configure Grafana to visualize Prometheus metrics in custom dashboards.
 
   
-### Summary
+## Summary
 By integrating Docker, Kubernetes, GitHub Actions, and monitoring solutions, this project benefits from:
 - Automated testing, building, and deployment.
 - Scalable, containerized infrastructure.
