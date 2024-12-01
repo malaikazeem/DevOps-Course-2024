@@ -10,7 +10,6 @@ This document highlights my practical experience with DevOps tools and methodolo
 - **Docker**: Containerization for application portability.
 - **Kubernetes**: Orchestration for managing containers.
 - **Jenkins**: Continuous Integration/Continuous Deployment (CI/CD) automation.
-- **Ansible**: Configuration management and automation.
 - **Terraform**: Infrastructure as Code (IaC) for cloud resource provisioning.
 - **Prometheus & Grafana**: Monitoring and visualization.
 - **AWS**: Cloud services for hosting and scaling applications.
@@ -25,7 +24,6 @@ This document highlights my practical experience with DevOps tools and methodolo
   - **Docker**: Containerized the platform to ensure consistent deployment across environments.  
   - **Kubernetes**: Managed scaling and load balancing for high availability.  
   - **Jenkins**: Automated CI/CD pipelines for seamless integration of updates.  
-- **Impact**: Reduced deployment time by 40% and ensured zero downtime during updates.
 
 ---
 
@@ -33,9 +31,8 @@ This document highlights my practical experience with DevOps tools and methodolo
 - **Objective**: Develop and deploy an LMS with automated monitoring.  
 - **Tools Used**:
   - **Terraform**: Provisioned AWS infrastructure using Infrastructure as Code (IaC).  
-  - **Prometheus & Grafana**: Set up system monitoring and performance dashboards.  
-  - **Ansible**: Automated the configuration of virtual machines.  
-- **Impact**: Enhanced system reliability with proactive monitoring and reduced manual setup effort by 50%.
+  - **Prometheus & Grafana**: Set up system monitoring and performance dashboards.   
+- **Impact**: Enhanced system reliability and reduced manual setup effort.
 
 ---
 
@@ -45,7 +42,6 @@ This document highlights my practical experience with DevOps tools and methodolo
   - **Git & GitHub**: Managed source code and collaborated with the team.  
   - **Jenkins**: Set up CI/CD pipelines to automate testing and deployment.  
   - **Docker**: Created isolated environments for testing.  
-- **Impact**: Improved development cycle efficiency by 30% with automated testing and deployment.
 
 ---
 
@@ -55,7 +51,6 @@ This document highlights my practical experience with DevOps tools and methodolo
   - **AWS**: Hosted the dashboard on EC2 instances and utilized S3 for storage.  
   - **Terraform**: Automated infrastructure provisioning.  
   - **Kubernetes**: Managed microservices architecture for the dashboard.  
-- **Impact**: Achieved real-time analytics with 99.9% uptime and reduced operational costs by 20%.
 
 ---
 
@@ -63,7 +58,6 @@ This document highlights my practical experience with DevOps tools and methodolo
 - **Objective**: Build a scalable and secure application for managing orders and inventory.  
 - **Tools Used**:
   - **Docker**: Ensured consistent application deployment.  
-  - **Ansible**: Automated server configuration and software installation.  
   - **Grafana**: Visualized performance metrics to ensure smooth operation.  
 - **Impact**: Streamlined operations, improving order processing speed by 25%.
 
@@ -76,4 +70,4 @@ This document highlights my practical experience with DevOps tools and methodolo
 
 ---
 
-I am constantly seeking to expand my expertise in DevOps tools and methodologies to deliver innovative and efficient solutions.
+I have experienced the significant impact of using DevOps tools in my projects. A lot of manual effort and time has been preserved by using these tools. Therefore, I am constantly seeking to expand my expertise in DevOps tools and methodologies to deliver innovative and efficient solutions.
