@@ -1,22 +1,18 @@
-# DevOps Implementation for Node.js REST API
+Here is the requested content formatted entirely in a single markdown file:
 
-This document describes the application of DevOps tools to enhance the development, deployment, and monitoring of a **Node.js REST API** project. The selected repository showcases a CRUD API built with Express.js and MongoDB.
+```markdown
+# DevOps Integration for [nodejs-rest-api](https://github.com/neverovski/nodejs-rest-api)
 
----
-
-## Repository Overview
-
-**Original Repository:** [NodeJS-RestAPI](https://github.com/TaniaLDavidson/NodeJS-RestAPI)  
-**Features:**
-- RESTful APIs using Express.js
-- MongoDB for database management
-- CRUD operations for managing tasks
+## Overview
+The [nodejs-rest-api](https://github.com/neverovski/nodejs-rest-api) repository is a RESTful API built using Node.js. It provides basic CRUD operations and serves as a strong foundation for backend applications. This document demonstrates the application of DevOps tools like Docker, Kubernetes, Jenkins, and GitHub Actions to automate and streamline development and deployment processes.
 
 ---
 
 ## Applying DevOps Tools
 
-### 1. **Containerization with Docker**
+### 1. Docker
+#### Purpose:
+Containerize the Node.js REST API application to ensure consistency across environments.
 
 #### Dockerfile:
 ```dockerfile
@@ -26,68 +22,116 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
 ```
 
-#### **Commands:**
-- Build the Docker image:
-`docker build -t nodejs-restapi`
-- Run the container:
-`docker run -p 3000:3000 nodejs-restapi`
+#### Commands:
+```bash
+# Build Docker Image
+docker build -t nodejs-rest-api .
+
+# Run Docker Container
+docker run -p 3000:3000 nodejs-rest-api
+```
 
 ---
 
-### 2. **Orchestration with Kubernetes**
-A Kubernetes configuration file (k8s/deployment.yaml) is added to deploy the application with replicas and expose it as a service.
+### 2. Kubernetes
+#### Purpose:
+Deploy and manage the REST API in a Kubernetes cluster for high availability and scalability.
 
-#### Deployment Configuration:
+#### Kubernetes Configuration (deployment.yaml):
 ```yaml
-Copy code
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-restapi
+  name: nodejs-rest-api
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: nodejs-restapi
+      app: nodejs-rest-api
   template:
     metadata:
       labels:
-        app: nodejs-restapi
+        app: nodejs-rest-api
     spec:
       containers:
-      - name: nodejs-restapi
-        image: nodejs-restapi:latest
+      - name: nodejs-rest-api
+        image: nodejs-rest-api:latest
         ports:
         - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-restapi-service
+  name: nodejs-service
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
   selector:
-    app: nodejs-restapi
+    app: nodejs-rest-api
 ```
 
-#### **Commands:**
-- Deploy the application:
-`kubectl apply -f k8s/deployment.yaml`
+#### Commands:
+```bash
+# Apply Kubernetes Configuration
+kubectl apply -f deployment.yaml
+```
 
 ---
 
-### 3. **Continuous Integration with GitHub Actions**
-A GitHub Actions workflow automates testing and deployment.
+### 3. Jenkins
+#### Purpose:
+Automate the CI/CD pipeline for building, testing, and deploying the application.
 
-Workflow Configuration (.github/workflows/main.yml):
+#### Jenkinsfile:
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/neverovski/nodejs-rest-api.git'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t nodejs-rest-api .'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                sh 'npm test'
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                withDockerRegistry([credentialsId: 'dockerhub-credentials', url: '']) {
+                    sh 'docker tag nodejs-rest-api username/nodejs-rest-api:latest'
+                    sh 'docker push username/nodejs-rest-api:latest'
+                }
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
+    }
+}
+```
+
+---
+
+### 4. GitHub Actions
+#### Purpose:
+Set up automated CI/CD workflows using GitHub Actions.
+
+#### Workflow File (.github/workflows/main.yml):
 ```yaml
-
 name: CI/CD Pipeline
 
 on:
@@ -96,51 +140,44 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout Repository
       uses: actions/checkout@v3
+
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '16'
-    - name: Install dependencies
+
+    - name: Install Dependencies
       run: npm install
-    - name: Run tests
+
+    - name: Run Tests
       run: npm test
-    - name: Build Docker image
-      run: docker build -t username/nodejs-restapi .
-    - name: Push Docker image
+
+    - name: Build Docker Image
+      run: docker build -t username/nodejs-rest-api .
+
+    - name: Push Docker Image to Docker Hub
       env:
-        DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-        DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
-        echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
-        docker push username/nodejs-restapi:latest
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Set up Kubernetes CLI
-      uses: azure/setup-kubectl@v3
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        docker push username/nodejs-rest-api:latest
+
     - name: Deploy to Kubernetes
-      run: kubectl apply -f k8s/deployment.yaml
+      run: kubectl apply -f deployment.yaml
 ```
 
 ---
 
+## Conclusion
+By integrating Docker, Kubernetes, Jenkins, and GitHub Actions, this setup automates the process of building, testing, containerizing, and deploying the Node.js REST API application. These tools ensure an efficient, reliable, and repeatable workflow, enhancing productivity while reducing manual intervention.
 
-### 4. **Monitoring with Prometheus and Grafana**
-Steps:
-- Add a /metrics endpoint in the Node.js API for Prometheus scraping.
-- Deploy Prometheus and Grafana using Helm in the Kubernetes cluster.
-- Configure Grafana to visualize Prometheus metrics in custom dashboards.
+For more information, visit the repository: [nodejs-rest-api](https://github.com/neverovski/nodejs-rest-api).
+```
 
-  
-## Summary
-By integrating Docker, Kubernetes, GitHub Actions, and monitoring solutions, this project benefits from:
-- Automated testing, building, and deployment.
-- Scalable, containerized infrastructure.
-- Robust monitoring for performance and reliability.
-
+You can copy and paste this into a `.md` file to use directly.
