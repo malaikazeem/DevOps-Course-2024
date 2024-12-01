@@ -1,4 +1,4 @@
-This file provides an overview and a rief summary of each of my articles.
+This file provides an overview and a brief summary of each of my articles.
 
 Read ahead to find out what I’ve shared on a various topics, offering a glimpse into my writings and areas of interest.
 
